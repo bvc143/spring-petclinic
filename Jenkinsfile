@@ -1,4 +1,4 @@
-Node(BUILD-11-JDK){
+Node('BUILD-11-JDK'){
       stage('SourceCode'){
           git branch: 'scripted', url: 'https://github.com/bvc143/spring-petclinic.git'
         }
