@@ -2,7 +2,7 @@ Node(BUILD-11-JDK){
       stage('SourceCode'){
           git branch: 'scripted', url: 'https://github.com/bvc143/spring-petclinic.git'
         }
-       stage('BUILD THE CODE){
+       stage('BUILD THE CODE'){
             sh 'mvn package'
         }
       stage('Archiving and test results'){
