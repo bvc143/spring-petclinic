@@ -1,6 +1,6 @@
 pipeline {
     agent {
-       label 'BUILD_11_JDK'
+       label 'BUILD_8_JDK'
     }
     triggers {
      cron 'H  */1 * * *'
