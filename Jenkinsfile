@@ -12,16 +12,16 @@ pipeline {
                       git branch: 'declarative', url: 'https://github.com/bvc143/spring-petclinic.git'
                  }
          }
-        //stage('Build The Code' ){
-          //   steps{
-            //      sh 'mvn package'
-         //    }
-        // }
-        // stage('Archiving and test results'){
-          //   steps{
-            //       junit '**/surefire-reports/*.xml' 
-            // archiveArtifacts artifacts: '**/*war', followSymlinks: false
-             //}
-         //}
+        stage('Build The Code' ){
+             steps{
+                 sh 'mvn package'
+           }
+         }
+       stage('Archiving and test results'){
+           steps{
+                junit '**/surefire-reports/*.xml' 
+            archiveArtifacts artifacts: '**/*war', followSymlinks: false
+           }
+         }
     }
 }
